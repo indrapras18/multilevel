@@ -36,7 +36,6 @@ public class Transaksi extends javax.swing.JFrame {
     entitas eb = new entitas();
     int jumlah = 0;
     List<String> list = new ArrayList<String>();
-
     Statement stm;
     com.mysql.jdbc.Connection Con;
     private double total;
@@ -88,7 +87,8 @@ public class Transaksi extends javax.swing.JFrame {
     }
 
     public void doTransaction() {
-        String sql = "insert into stok_kr(tanggal_keluar,nama_pelanggan,id_menu,jumlah,pembayaran) values(CURRENT_TIMESTAMP(),'" + nama_pelanggan.getText() + "','" + id_transaksi + "','" + jumlah_kurang.getText() + "','" + pembayaran.getText() + "')";
+        String sql = "insert into stok_kr(tanggal_keluar,nama_pelanggan,id_menu,jumlah,pembayaran) values(CURRENT_TIMESTAMP(),'" + nama_pelanggan.getText() + "','" + id_transaksi + "',"
+                + "'" + jumlah_kurang + "','" + pembayaran.getText() + "')";
         System.out.println(sql);
         try {
             conn = (Connection) koneksi.configDB();
@@ -409,7 +409,6 @@ public class Transaksi extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         getAdd();
-        nama_pelanggan.setText("");
         makanan.setSelectedItem("");
         kurang_stok.setText("");
         jumlah_kurang.setText("");

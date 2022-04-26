@@ -177,6 +177,12 @@ public class staff extends javax.swing.JFrame {
         jk.setText("JK");
         panel_insert.add(jk, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 40, -1));
         panel_insert.add(nama_staff, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 160, -1));
+
+        alamat_staff.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                alamat_staffActionPerformed(evt);
+            }
+        });
         panel_insert.add(alamat_staff, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 160, -1));
         panel_insert.add(no_hp_staff, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 160, -1));
 
@@ -305,6 +311,10 @@ public class staff extends javax.swing.JFrame {
         alamat_staff.setText("");
         no_hp_staff.setText("");
     }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void alamat_staffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alamat_staffActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_alamat_staffActionPerformed
 
     /**
      * @param args the command line arguments
