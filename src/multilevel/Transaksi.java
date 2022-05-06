@@ -87,8 +87,7 @@ public class Transaksi extends javax.swing.JFrame {
     }
 
     public void doTransaction() {
-        String sql = "insert into stok_kr(tanggal_keluar,nama_pelanggan,id_menu,jumlah,pembayaran) values(CURRENT_TIMESTAMP(),'" + nama_pelanggan.getText() + "','" + id_transaksi + "',"
-                + "'" + jumlah_kurang + "','" + pembayaran.getText() + "')";
+        String sql = "insert into transaksi(tanggal_keluar,nama_pelanggan,id_menu,jumlah,pembayaran) values (CURRENT_TIMESTAMP(),'" + nama_pelanggan.getText() + "','" + id_transaksi + "','" + jumlah_kurang.getText() + "','" + pembayaran.getText() + "')";
         System.out.println(sql);
         try {
             conn = (Connection) koneksi.configDB();

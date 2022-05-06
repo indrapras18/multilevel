@@ -49,8 +49,8 @@ public class MaterialStok extends javax.swing.JFrame {
         try {
             String sql = "select * from stok_menu";
             java.sql.Connection konek = (Connection) koneksi.configDB();
-            java.sql.PreparedStatement pst = konek.prepareStatement(sql);
-            java.sql.ResultSet rs = pst.executeQuery(sql);
+            pst = konek.prepareStatement(sql);
+            rs = pst.executeQuery(sql);
 
             DefaultPieDataset dataset = new DefaultPieDataset();
             JFreeChart chart = ChartFactory.createPieChart("Pie Chart", dataset);
@@ -128,18 +128,18 @@ public class MaterialStok extends javax.swing.JFrame {
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, 20));
 
         jLabel4.setText("nama menu");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, 20));
-        jPanel2.add(nama_menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 190, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, 20));
+        jPanel2.add(nama_menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 190, -1));
 
         jLabel5.setText("harga menu");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, 20));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, 20));
 
         harga.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 hargaKeyReleased(evt);
             }
         });
-        jPanel2.add(harga, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 190, -1));
+        jPanel2.add(harga, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 190, -1));
 
         jButton1.setText("Tambah");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -147,17 +147,17 @@ public class MaterialStok extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, -1, -1));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, -1, -1));
 
         jLabel6.setText("jumlah menu");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, 20));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, 20));
 
         jumlah.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jumlahKeyReleased(evt);
             }
         });
-        jPanel2.add(jumlah, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 190, -1));
+        jPanel2.add(jumlah, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 190, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 280, 340));
 

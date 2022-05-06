@@ -129,7 +129,7 @@ public class absen extends javax.swing.JFrame {
             String sql = "SELECT staff.`id_staff`,staff.`nama_staff`,absen.`waktu_absen`\n"
                     + "FROM staff,absen\n"
                     + "WHERE staff.`id_staff` = absen.`id_staff`\n"
-                    + "HAVING MONTH (waktu_absen) =" + bulan.getText() + " OR YEAR (waktu_absen) =" + tahun.getText();
+                    + "HAVING MONTH (waktu_absen) =" + bulan.getText() + " and YEAR (waktu_absen) =" + tahun.getText();
 
             java.sql.Connection konek = (Connection) koneksi.configDB();
             java.sql.PreparedStatement pst = konek.prepareStatement(sql);

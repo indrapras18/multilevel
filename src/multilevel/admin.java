@@ -49,6 +49,13 @@ public class admin extends javax.swing.JFrame {
             while (rs.next()) {
                 material.setText(rs.getString(1));
             }
+
+            sql = "select sum(jumlah) from stok_kr";
+            pst = conn.prepareStatement(sql);
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                pendapatan.setText(rs.getString(1));
+            }
         } catch (Exception e) {
 
         }
